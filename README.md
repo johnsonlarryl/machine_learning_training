@@ -3,10 +3,10 @@
 
 This project is a practical training tutorial for learning about the various Machine Learning algorithms using the Sci-Kit Learn python module.  By reading solid material and using hands on coding samples aspiring or practicioners in the Machine Learning field will learn advanced mathematical computation topics that support the machine learning model in question.  Below is a current list of machine larning models integrated with below to date.
 
-| Type       | Sub Type       | Model             |
-|------------|----------------|-------------------|
-| Supervised | Classification | [Decision Tree](chapter_6_decision_trees/) |
-| Paragraph  | Regression     | [Decision Tree](chapter_6_decision_trees/) |
+| Type       | Sub Type       | Model                             |
+|------------|----------------|-----------------------------------|
+| Supervised | Classification | [Decision Trees](decision_trees/) |
+| Paragraph  | Regression     | [Decision Trees](decision_trees/) |
 
 
 ### Built With
