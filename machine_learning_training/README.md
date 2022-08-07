@@ -6,7 +6,7 @@ This project is a practical training tutorial for learning about the various Mac
 | Type       | Sub Type       | Model                             |
 |------------|----------------|-----------------------------------|
 | Supervised | Classification | [Decision Trees](decision_trees/) |
-| Paragraph  | Regression     | [Decision Trees](decision_trees/) |
+| Supervised  | Regression     | [Decision Trees](decision_trees/) |
 
 
 ### Built With
@@ -51,9 +51,11 @@ Below is the list of steps for installing and setting up the app. These instruct
 
 1. Clone the repo
    ```sh
+   git clone git@github.com:johnsonlarryl/machine_learning_training.git
    ```
-2. TBD
+2. Install poetry
    ```sh
+   poetry install
    ```
 3. TBD
    ```sh
@@ -71,10 +73,18 @@ Below is the list of steps for installing and setting up the app. These instruct
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+In order to view or execute the various notebooks run the following command on any of the sub folders in this directory.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+Here is an example to launch the Decision Tree Notebook.
 
+```sh
+poetry run jupyter notebook decision_trees
+```
+
+Once inside the notebook [use the following link](https://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Running%20Code.html) on examples of how to use the notebook.
+
+
+   
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
