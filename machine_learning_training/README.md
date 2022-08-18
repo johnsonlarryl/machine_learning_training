@@ -1,7 +1,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This project is a practical training tutorial for learning about the various Machine Learning algorithms using the Sci-Kit Learn python module.  By reading solid material and using hands on coding samples aspiring or practicioners in the Machine Learning field will learn advanced mathematical computation topics that support the machine learning model in question.  Below is a current list of machine larning models integrated with below to date.
+This project is a practical training tutorial for learning about the various Machine Learning algorithms using the Sci-Kit Learn python module.  By reading solid material and using hands on coding samples aspiring or practitioners in the Machine Learning field will learn advanced mathematical computations and algorithms that support the machine learning model in question.  Below is a current list of machine larning models integrated with Sci-Kit Learn below to date.
 
 | Type       | Sub Type       | Model                             |
 |------------|----------------|-----------------------------------|
@@ -14,7 +14,7 @@ This project is a practical training tutorial for learning about the various Mac
 This section lists all major frameworks/libraries used to bootstrap this project.
 
 * [![Python][Python.org]][Python-url]
-* [![React][Jupyter.org]][Jupyter-url]
+* [![Jupyter][Jupyter.org]][Jupyter-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -119,7 +119,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@realfintorian](https://twitter.com/your_username) - tbd@tbd.com
+Your Name - [@realfintorian](https://twitter.com/realfintorian) - johnson.larry.l@fintorian.com
 
 Project Link: [https://github.com/johnsonlarryl/machine_learning_training](https://github.com/your_username/repo_name)
 
