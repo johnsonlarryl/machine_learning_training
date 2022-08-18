@@ -37,7 +37,9 @@ Below is the list things you need to use the software and how to install them.  
    
 3. poetry
    ```sh
-   curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+   cd /tmp
+   curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-$(uname)-$(uname -m).sh"
+   bash Mambaforge-$(uname)-$(uname -m).sh
    ```
 
 ### Installation
@@ -50,7 +52,9 @@ Below is the list of steps for installing and setting up the app. These instruct
    ```
 2. Install project
    ```sh
-   poetry install
+  conda create -n discrete_math
+  conda activate discrete_math
+  conda install jupyter
    ```
 3. TBD
    ```sh
@@ -125,7 +129,7 @@ Project Link: [https://github.com/johnsonlarryl/machine_learning_training](https
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* [Oreilly](https://learning.oreilly.com/library/view/hands-on-machine-learning/9781098125967/)
+* [Oreilly](https://learning.oreilly.com/library/view/practical-discrete-mathematics/9781838983147/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
