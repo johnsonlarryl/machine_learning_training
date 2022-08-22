@@ -63,16 +63,11 @@ Below is the list of steps for installing and setting up the app. These instruct
    ```sh
    conda create -n permutation_and_combinations
    conda activate permutation_and_combinations
-   conda install jupyter
    ```
 3. Install Jupyter Notebook
    ```sh
-   jupyter notebook
+   conda install jupyter
    ```
-4. TBD
-   ```sh
-   ```
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -83,10 +78,10 @@ Below is the list of steps for installing and setting up the app. These instruct
 
 In order to view or execute the various notebooks run the following command on any of the sub folders in this directory.
 
-Here is an example to launch the Decision Tree Notebook.
+Here is an example to launch the Permutations and Combination Notebook.
 
 ```sh
-poetry run jupyter notebook decision_trees
+jupyter notebook permutation_and_combinations
 ```
 
 Once inside the notebook [use the following link](https://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Running%20Code.html) on examples of how to use the notebook.
