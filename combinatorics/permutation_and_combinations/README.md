@@ -61,12 +61,14 @@ Below is the list of steps for installing and setting up the app. These instruct
    ```
 2. Install project
    ```sh
-   conda create -n permutation_and_combinations
+   poetry install
+   conda env create -f environment.yaml
    conda activate permutation_and_combinations
    ```
 3. Install Jupyter Notebook
    ```sh
    conda install jupyter
+   conda install pandas
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -81,7 +83,7 @@ In order to view or execute the various notebooks run the following command on a
 Here is an example to launch the Permutations and Combination Notebook.
 
 ```sh
-jupyter notebook permutation_and_combinations
+jupyter notebook
 ```
 
 Once inside the notebook [use the following link](https://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Running%20Code.html) on examples of how to use the notebook.

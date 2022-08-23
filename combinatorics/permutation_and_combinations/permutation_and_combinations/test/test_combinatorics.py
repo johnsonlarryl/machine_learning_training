@@ -7,21 +7,21 @@ from permutation_and_combinations.combinatorics import COMBINATION, combination,
 
 
 @given(st.integers(min_value=10, max_value=100))
-def test_factorial(n: int):
+def test_factorial(n: int) -> None:
     actual = factorial(n)
     expect = math.factorial(n)
 
     assert actual == expect
 
 
-def test_both_negative_factorial_negative_end_range():
+def test_both_negative_factorial_negative_end_range() -> None:
     n = -1
 
     with pytest.raises(ValueError):
         factorial(n)
 
 
-def test_nonint_factorial_negative_end_range():
+def test_nonint_factorial_negative_end_range() -> None:
     n = "10"
 
     with pytest.raises(ValueError):
@@ -29,7 +29,7 @@ def test_nonint_factorial_negative_end_range():
 
 
 @given(st.integers(min_value=10, max_value=100), st.integers(min_value=2, max_value=5))
-def test_permutation(n: int, r: int):
+def test_permutation(n: int, r: int) -> None:
     actual = permutation(n, r)
     expect = math.perm(n, r)
 
@@ -37,14 +37,14 @@ def test_permutation(n: int, r: int):
 
 
 @given(st.integers(min_value=10, max_value=100), st.integers(min_value=2, max_value=5))
-def test_combination(n: int, r: int):
+def test_combination(n: int, r: int) -> None:
     actual = combination(n, r)
     expect = math.comb(n, r)
 
     assert actual == expect
 
 
-def test_permutation_list():
+def test_permutation_list() -> None:
     teams_file = csv.DictReader(open("../data/teams.csv"))
     teams = []
     r = 2
@@ -57,7 +57,7 @@ def test_permutation_list():
     assert permutation(len(teams), 2) == len(perm_list)
 
 
-def test_combination_list():
+def test_combination_list() -> None:
     teams_file = csv.DictReader(open("../data/teams.csv"))
     teams = []
     r = 2

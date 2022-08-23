@@ -1,0 +1,8 @@
+name: permutation_and_combinations
+
+channels:
+  - defaults
+  - conda-forge
+
+dependencies:
+  - python=3.9.5
