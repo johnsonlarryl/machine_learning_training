@@ -81,6 +81,11 @@ def combinatorics_list(s: List[Any], r: int, algo=PERMUTATION) -> List[Tuple]:
 
 
 def add_item(collection: Any, temp_tuple: List, algo=PERMUTATION) -> None:
+    """
+    :param collection:  List or collection of elements
+    :param temp_tuple: Temporary data structure to hold elements in flight for processing
+    :param algo: Enumerated combinatorics algorithm of choice 'combo' for Combinations and "perm" for Permutations
+    """
     error_message = f"collection is of type {type(collection)} is not supported."
 
     if algo == PERMUTATION:
@@ -91,7 +96,7 @@ def add_item(collection: Any, temp_tuple: List, algo=PERMUTATION) -> None:
     elif algo == COMBINATION:
         if isinstance(collection, set):
             if is_unique(collection, tuple(temp_tuple)):
-                collection.add(tuple(temp_tuple)) # Only add if the tuple is unique, including the reverse tuple
+                collection.add(tuple(temp_tuple))  # Only add if the tuple is unique, including the reverse tuple
         else:
             raise NotImplemented(error_message)
     else:
