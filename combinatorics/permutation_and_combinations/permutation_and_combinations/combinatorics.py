@@ -55,7 +55,6 @@ def combinatorics_list(s: List[Any], r: int, algo=PERMUTATION) -> List[Tuple]:
     for i in range(len(s)):
         if temp_tuple:  # There could still be data to process
             add_item(running_list, temp_tuple, algo)
-            # running_list.append(tuple(temp_tuple))
 
         temp_tuple = [s[i]]
 
@@ -67,12 +66,10 @@ def combinatorics_list(s: List[Any], r: int, algo=PERMUTATION) -> List[Tuple]:
                 temp_tuple.append(s[j])
             else:
                 add_item(running_list, temp_tuple, algo)
-                # running_list.append(tuple(temp_tuple))
                 temp_tuple = [s[i], s[j]]
 
     if temp_tuple:  # There could still be data to process
         add_item(running_list, temp_tuple, algo)
-        # running_list.append(tuple(temp_tuple))
 
     return running_list
 
@@ -95,7 +92,7 @@ def add_item(collection: Any, temp_tuple: List, algo=PERMUTATION) -> None:
         raise NotImplemented(error_message)
 
 
-def is_unique(collection: set, a: Tuple):
+def is_unique(collection: set, a: Tuple) -> bool:
     b = a[::-1]
 
     return b not in collection
