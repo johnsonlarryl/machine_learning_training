@@ -1,14 +1,16 @@
 import traceback
 
 
-def factorial(end_range: int):
+def factorial(n: int):
 
     try:
         fact = 1
 
-        if end_range >= 0:
-            for i in range(1, end_range + 1):
-                fact *= i
+        if n >= 0:
+            if (n == 0) or (n == 1):
+                return 1
+            else:
+                return n * factorial(n - 1)
 
             return fact
         else:
