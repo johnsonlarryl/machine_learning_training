@@ -93,7 +93,7 @@ Once inside the notebook [use the following link](https://jupyter-notebook.readt
 <!-- DESIGN -->
 ## Design
 * n = Number of elements in collection or list
-* r = Number of elements in each pair
+* r = Number of elements in each tuple
 ### Permutation
 
 <img src="https://latex.codecogs.com/gif.latex?\frac{n!}{(n-r)!}\quad" /> 

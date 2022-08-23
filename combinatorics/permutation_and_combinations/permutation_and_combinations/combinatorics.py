@@ -36,13 +36,19 @@ def permutation(n: int, r: int) -> int:
 def combination(n: int, r: int) -> int:
     """
     :param n:Number of elements in collection or list
-    :param r: Number of elements in each pair
+    :param r: Number of elements in each tuple
     :return: Combination of collection and pairs
     """
     return int(factorial(n) / (factorial(n-r) * factorial(r)))
 
 
 def combinatorics_list(s: List[Any], r: int, algo=PERMUTATION) -> List[Tuple]:
+    """
+    :param s: List or collection of elements
+    :param r:  Number of elements in each tuple
+    :param algo: Enumerated combinatorics algorithm of choice 'combo' for Combinations and "perm" for Permutations
+    :return: List of Combinations or Permutations
+    """
     temp_tuple = []
 
     if algo == PERMUTATION:
