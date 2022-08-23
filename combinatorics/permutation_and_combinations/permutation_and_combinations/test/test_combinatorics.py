@@ -2,7 +2,7 @@ from hypothesis import given, strategies as st
 import math
 import pytest
 
-from permutation_and_combinations.combinatorics import factorial
+from permutation_and_combinations.combinatorics import combination, factorial, permutation
 
 
 @given(st.integers(min_value=10, max_value=100))
@@ -25,3 +25,20 @@ def test_nonint_factorial_negative_end_range():
 
     with pytest.raises(ValueError):
         factorial(n)
+
+
+@given(st.integers(min_value=10, max_value=100), st.integers(min_value=2, max_value=5))
+def test_permutation(n: int, r: int):
+    actual = permutation(n, r)
+    expect = math.perm(n, r)
+
+    assert actual == expect
+
+
+@given(st.integers(min_value=10, max_value=100), st.integers(min_value=2, max_value=5))
+def test_combination(n: int, r: int):
+    actual = combination(n, r)
+    expect = math.comb(n, r)
+
+    assert actual == expect
+
