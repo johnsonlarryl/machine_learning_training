@@ -1,8 +1,10 @@
 name: permutation_and_combinations
 
 channels:
-  - defaults
   - conda-forge
+  - defaults
 
 dependencies:
+  - pandas
   - python=3.9.5
+  - jupyter

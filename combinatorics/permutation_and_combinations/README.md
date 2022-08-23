@@ -65,11 +65,6 @@ Below is the list of steps for installing and setting up the app. These instruct
    conda env create -f environment.yaml
    conda activate permutation_and_combinations
    ```
-3. Install Jupyter Notebook
-   ```sh
-   conda install jupyter
-   conda install pandas
-   ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
