@@ -3,8 +3,8 @@
 
 This project is a practical training tutorial for learning about the two popular combinatorics mathematical concepts. In particular this project covers Permutations and Combinations.
 
-| Type       | Sub Type       | Model                             |
-|------------|----------------|-----------------------------------|
+| Type       | Sub Type       | Algorithm                                     |
+|------------|----------------|-----------------------------------------------|
 | Combinatorics | Permutations | [Permutations](permutation_and_combinations/) |
 | Combinatorics  | Combinations     | [Combinations](permutation_and_combinations/) |
 
@@ -90,6 +90,17 @@ Once inside the notebook [use the following link](https://jupyter-notebook.readt
    
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- DESIGN -->
+## Design
+* n = Number of elements in collection or list
+* r = Number of elements in each pair
+### Permutation
+
+<img src="https://latex.codecogs.com/gif.latex?\frac{n!}{(n-r)!}\quad" /> 
+
+### Combination
+
+<img src="https://latex.codecogs.com/gif.latex?\frac{n!}{(n-r)!r!}\quad" /> 
 
 
 <!-- CONTRIBUTING -->
