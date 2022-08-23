@@ -4,8 +4,6 @@ import traceback
 def factorial(n: int):
 
     try:
-        fact = 1
-
         if n >= 0:
             if (n == 0) or (n == 1):
                 return 1
@@ -14,7 +12,7 @@ def factorial(n: int):
 
             return fact
         else:
-            raise ValueError(f"Must use positive integer for factorial(fact): {fact} and end of range: {end_range}")
+            raise ValueError(f"Must use positive integer for {n}")
     except Exception as e:
         raise ValueError(f"{e} {traceback.format_exc()}")
 
