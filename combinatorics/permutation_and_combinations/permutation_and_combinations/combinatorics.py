@@ -1,9 +1,12 @@
 import traceback
 
 
-def factorial(fact: int, end_range: int):
+def factorial(end_range: int):
+
     try:
-        if (fact >= 0) and (end_range >= 0):
+        fact = 1
+
+        if end_range >= 0:
             for i in range(1, end_range + 1):
                 fact *= i
 
