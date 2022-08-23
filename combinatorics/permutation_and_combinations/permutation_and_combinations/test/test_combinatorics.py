@@ -1,8 +1,9 @@
+import csv
 from hypothesis import given, strategies as st
 import math
 import pytest
 
-from permutation_and_combinations.combinatorics import combination, factorial, permutation
+from permutation_and_combinations.combinatorics import COMBINATION, combination, combinatorics_list, factorial, permutation
 
 
 @given(st.integers(min_value=10, max_value=100))
@@ -42,3 +43,28 @@ def test_combination(n: int, r: int):
 
     assert actual == expect
 
+
+def test_permutation_list():
+    teams_file = csv.DictReader(open("../data/teams.csv"))
+    teams = []
+    r = 2
+
+    for row in teams_file:
+        teams.append(row)
+
+    team_ids = [team["id"] for team in teams]
+    perm_list = combinatorics_list(team_ids, r)
+    assert permutation(len(teams), 2) == len(perm_list)
+
+
+def test_combination_list():
+    teams_file = csv.DictReader(open("../data/teams.csv"))
+    teams = []
+    r = 2
+
+    for row in teams_file:
+        teams.append(row)
+
+    team_ids = [team["id"] for team in teams]
+    comb_list = combinatorics_list(team_ids, r, algo=COMBINATION)
+    assert combination(len(teams), 2) == len(comb_list)
