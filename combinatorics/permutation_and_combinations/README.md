@@ -8,8 +8,6 @@ This project is a practical training tutorial for learning about the two popular
 | Combinatorics | Permutations | [Permutations](permutation_and_combinations/) |
 | Combinatorics  | Combinations     | [Combinations](permutation_and_combinations/) |
 
-Cheese, what his friends and coaches call him, is a 12U baseball player in the 
-
 ### Built With
 
 This section lists all major frameworks/libraries used to bootstrap this project.
