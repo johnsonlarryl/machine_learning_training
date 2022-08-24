@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "permutation_and_combinations"
+version = "0.1.0"
+description = ""
+authors = ["Larry Johnson <johnson.larry.l@fintorian.com>"]
+
+[tool.poetry.dependencies]
+hypothesis = "^6.54.4"
+python = "^3.9"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
