@@ -14,7 +14,7 @@ This section lists all major frameworks/libraries used to bootstrap this project
 
 * [![Python][Python.org]][Python-url]
 * [![Jupyter][Jupyter.org]][Jupyter-url]
-* [![Anaconda][Anaconda.com]][Anaconda-url]
+* [![Miniconda][Miniconda.com]][Miniconda-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -41,6 +41,11 @@ Below is the list things you need to use the software and how to install them.  
    ```
    
 3. poetry
+   ```sh
+   curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+   ```
+   
+4. miniconda
    ```sh
    cd /tmp
    curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-$(uname)-$(uname -m).sh"
@@ -141,5 +146,5 @@ Project Link: [https://github.com/johnsonlarryl/machine_learning_training](https
 [Jupyter.org]:https://img.shields.io/badge/Jupyter-F37626.svg?&style=for-the-badge&logo=Jupyter&logoColor=white
 [Python-url]:https://python.org
 [Python.org]:https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white
-[Anaconda-url]:https://https://www.anaconda.com/
-[Anaconda.com]:https://img.shields.io/badge/Anaconda-%2344A833.svg?style=for-the-badge&logo=anaconda&logoColor=white
+[Miniconda-url]:https://docs.conda.io/
+[Miniconda.com]:https://img.shields.io/badge/conda-342B029.svg?&style=for-the-badge&logo=anaconda&logoColor=white
