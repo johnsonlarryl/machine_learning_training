@@ -14,6 +14,7 @@ This section lists all major frameworks/libraries used to bootstrap this project
 
 * [![Python][Python.org]][Python-url]
 * [![Jupyter][Jupyter.org]][Jupyter-url]
+* [![Anaconda][Anaconda.com]][Anaconda-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -140,3 +141,5 @@ Project Link: [https://github.com/johnsonlarryl/machine_learning_training](https
 [Jupyter.org]:https://img.shields.io/badge/Jupyter-F37626.svg?&style=for-the-badge&logo=Jupyter&logoColor=white
 [Python-url]:https://python.org
 [Python.org]:https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white
+[Anaconda-url]:https://https://www.anaconda.com/
+[Anaconda.com]:https://img.shields.io/badge/Anaconda-%2344A833.svg?style=for-the-badge&logo=anaconda&logoColor=white
