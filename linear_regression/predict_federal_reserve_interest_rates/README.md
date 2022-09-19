@@ -1,20 +1,11 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<<<<<<< HEAD
 This project is a practical training tutorial for learning about Supervised Learning models. In particular this project covers Linear Regression models.
 
 | Type               | Sub Type     | Algorithm                                          |
 |--------------------|--------------|----------------------------------------------------|
 | Supervied Learning | Regression   | [Linear Regression](predict_federal_reserve_interest_rates/) |
-=======
-This project is a practical training tutorial for learning about the two popular combinatorics mathematical concepts. In particular this project covers Permutations and Combinations.
-
-| Type       | Sub Type       | Algorithm                                     |
-|------------|----------------|-----------------------------------------------|
-| Combinatorics | Permutations | [Permutations](permutation_and_combinations/) |
-| Combinatorics  | Combinations     | [Combinations](permutation_and_combinations/) |
->>>>>>> 61b15bdd651d11ef833218bf59016649ad7c7aac
 
 ### Built With
 
@@ -75,11 +66,7 @@ Below is the list of steps for installing and setting up the app. These instruct
    ```sh
    poetry install
    conda env create -f environment.yaml
-<<<<<<< HEAD
    conda activate predict_federal_reserve_interest_rates
-=======
-   conda activate permutation_and_combinations
->>>>>>> 61b15bdd651d11ef833218bf59016649ad7c7aac
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -91,11 +78,7 @@ Below is the list of steps for installing and setting up the app. These instruct
 
 In order to view or execute the various notebooks run the following command on any of the sub folders in this directory.
 
-<<<<<<< HEAD
 Here is an example to launch the Bank Prime Interest Prediction Model Notebook.
-=======
-Here is an example to launch the Permutations and Combination Notebook.
->>>>>>> 61b15bdd651d11ef833218bf59016649ad7c7aac
 
 ```sh
 jupyter notebook
@@ -109,20 +92,8 @@ Once inside the notebook [use the following link](https://jupyter-notebook.readt
 
 <!-- DESIGN -->
 ## Design
-<<<<<<< HEAD
+
 TBD
-=======
-* n = Number of elements in collection or list
-* r = Number of elements in each tuple
-### Permutation
-
-<img src="https://latex.codecogs.com/gif.latex?\frac{n!}{(n-r)!}\quad" /> 
-
-### Combination
-
-<img src="https://latex.codecogs.com/gif.latex?\frac{n!}{(n-r)!r!}\quad" /> 
-
->>>>>>> 61b15bdd651d11ef833218bf59016649ad7c7aac
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -160,7 +131,6 @@ Project Link: [https://github.com/johnsonlarryl/machine_learning_training](https
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<<<<<<< HEAD
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
@@ -171,8 +141,6 @@ Project Link: [https://github.com/johnsonlarryl/machine_learning_training](https
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-=======
->>>>>>> 61b15bdd651d11ef833218bf59016649ad7c7aac
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [Jupyter-url]:https://jupyter.org
