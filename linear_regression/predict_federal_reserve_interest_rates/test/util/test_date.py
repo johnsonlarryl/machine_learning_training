@@ -21,7 +21,6 @@ def get_year():
 @given(st.integers(min_value=1929, max_value=get_year()),
        period_strategy())
 def test_parse_cpi_index_date(year, period):
-    year = 1995
     month = get_month(period)
     expect_period = pd.Period(year=year, month=month, freq='M')
     actual_period = parse_cpi_index_date(year, period)
