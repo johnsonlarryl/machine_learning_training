@@ -1,4 +1,4 @@
-name: permutation_and_combinations
+name: predict_federal_reserve_interest_rates
 
 channels:
   - conda-forge

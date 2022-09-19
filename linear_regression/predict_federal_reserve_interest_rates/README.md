@@ -1,12 +1,11 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This project is a practical training tutorial for learning about the two popular combinatorics mathematical concepts. In particular this project covers Permutations and Combinations.
+This project is a practical training tutorial for learning about Supervised Learning models. In particular this project covers Linear Regression models.
 
-| Type       | Sub Type       | Algorithm                                     |
-|------------|----------------|-----------------------------------------------|
-| Combinatorics | Permutations | [Permutations](permutation_and_combinations/) |
-| Combinatorics  | Combinations     | [Combinations](permutation_and_combinations/) |
+| Type               | Sub Type     | Algorithm                                          |
+|--------------------|--------------|----------------------------------------------------|
+| Supervied Learning | Regression   | [Linear Regression](predict_federal_reserve_interest_rates/) |
 
 ### Built With
 
@@ -67,7 +66,7 @@ Below is the list of steps for installing and setting up the app. These instruct
    ```sh
    poetry install
    conda env create -f environment.yaml
-   conda activate permutation_and_combinations
+   conda activate predict_federal_reserve_interest_rates
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -79,7 +78,7 @@ Below is the list of steps for installing and setting up the app. These instruct
 
 In order to view or execute the various notebooks run the following command on any of the sub folders in this directory.
 
-Here is an example to launch the Permutations and Combination Notebook.
+Here is an example to launch the Bank Prime Interest Prediction Model Notebook.
 
 ```sh
 jupyter notebook
@@ -93,16 +92,8 @@ Once inside the notebook [use the following link](https://jupyter-notebook.readt
 
 <!-- DESIGN -->
 ## Design
-* n = Number of elements in collection or list
-* r = Number of elements in each tuple
-### Permutation
 
-<img src="https://latex.codecogs.com/gif.latex?\frac{n!}{(n-r)!}\quad" /> 
-
-### Combination
-
-<img src="https://latex.codecogs.com/gif.latex?\frac{n!}{(n-r)!r!}\quad" /> 
-
+TBD
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -137,6 +128,16 @@ Distributed under the GNU License. See `LICENSE.md` for more information.
 Your Name - [@realfintorian](https://twitter.com/realfintorian) - johnson.larry.l@fintorian.com
 
 Project Link: [https://github.com/johnsonlarryl/machine_learning_training](https://github.com/your_username/repo_name)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGMENTS -->
+## Acknowledgments
+
+* [Kaggle](https://www.kaggle.com/datasets/federalreserve/interest-rates)
+* [U.S. Federal Reserve](https://www.federalreserve.gov/datadownload/)
+* [U.S. Treasury](https://home.treasury.gov/interest-rates-data-csv-archive)
+* [U.S. Bureau of Labor Statistics](https://download.bls.gov/pub/time.series/ap/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
