@@ -1,0 +1,10 @@
+name: predict_federal_reserve_interest_rates
+
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  - pandas
+  - python=3.9.5
+  - jupyter
