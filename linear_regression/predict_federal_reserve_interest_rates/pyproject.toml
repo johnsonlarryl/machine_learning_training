@@ -5,11 +5,18 @@ description = ""
 authors = ["Larry Johnson <johnson.larry.l@fintorian.com>"]
 
 [tool.poetry.dependencies]
+<<<<<<< HEAD
 pandas = "^1.4.4"
 python = "^3.9"
 
 [tool.poetry.dev-dependencies]
 hypothesis = "^6.54.4"
+=======
+hypothesis = "^6.54.4"
+python = "^3.9"
+
+[tool.poetry.dev-dependencies]
+>>>>>>> 61b15bdd651d11ef833218bf59016649ad7c7aac
 pytest = "^5.2"
 
 [build-system]

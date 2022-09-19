@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 name: predict_federal_reserve_interest_rates
+=======
+name: permutation_and_combinations
+>>>>>>> 61b15bdd651d11ef833218bf59016649ad7c7aac
 
 channels:
   - conda-forge
