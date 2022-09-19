@@ -134,10 +134,10 @@ Project Link: [https://github.com/johnsonlarryl/machine_learning_training](https
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* [Kaggle](https://www.kaggle.com/datasets/federalreserve/interest-rates)
 * [U.S. Federal Reserve](https://www.federalreserve.gov/datadownload/)
 * [U.S. Treasury](https://home.treasury.gov/interest-rates-data-csv-archive)
 * [U.S. Bureau of Labor Statistics](https://download.bls.gov/pub/time.series/ap/)
+* [Wall Street Journal](https://www.wsj.com/market-data/quotes/index/SPX/historical-prices)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
