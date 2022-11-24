@@ -2,7 +2,7 @@ import datetime
 import os
 import pandas as pd
 from hypothesis import given, strategies as st
-from predict_federal_reserve_interest_rates.util.date import get_month, parse_cpi_index_date
+from predict_federal_reserve_interest_rates.util.date import get_month, parse_cpi_index_period
 
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -20,10 +20,10 @@ def get_year():
 
 @given(st.integers(min_value=1929, max_value=get_year()),
        period_strategy())
-def test_parse_cpi_index_date(year, period):
+def test_parse_cpi_index_period(year, period):
     month = get_month(period)
     expect_period = pd.Period(year=year, month=month, freq='M')
-    actual_period = parse_cpi_index_date(year, period)
+    actual_period = parse_cpi_index_period(year, period)
     assert expect_period == actual_period
 
 

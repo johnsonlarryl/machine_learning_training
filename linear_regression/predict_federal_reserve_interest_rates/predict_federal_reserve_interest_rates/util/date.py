@@ -3,7 +3,7 @@ from pandas import Period
 import re
 
 
-def parse_cpi_index_date(year: int, period: str) -> Period:
+def parse_cpi_index_period(year: int, period: str) -> Period:
     try:
         month = get_month(period)
         return pd.Period(year=year, month=month, freq='M')
