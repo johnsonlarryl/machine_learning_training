@@ -1,11 +1,11 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This project is a practical training tutorial for learning about the linear regression.
+This project is a practical training tutorial for learning about the perception learning algorithm.
 
-| Type                | Sub Type     | Algorithm                                          |
-|---------------------|--------------|----------------------------------------------------|
-| Supervised Learning | Regression   | [Linear Regression](predict_landens_driving_test/) |
+| Type                | Sub Type       | Algorithm                                   |
+|---------------------|----------------|---------------------------------------------|
+| Supervised Learning | Classification | [Perceptron](perceptron_learning_algorithm/) |
 
 ### Built With
 
@@ -66,7 +66,7 @@ Below is the list of steps for installing and setting up the app. These instruct
    ```sh
    poetry install
    conda env create -f environment.yaml
-   conda activate predict_landens_driving_test
+   conda activate perceptron_learning_algorithm
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -91,17 +91,7 @@ Once inside the notebook [use the following link](https://jupyter-notebook.readt
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- DESIGN -->
-## Design
-* n = Number of elements in collection or list
-* r = Number of elements in each tuple
-### Permutation
-
-<img src="https://latex.codecogs.com/gif.latex?\frac{n!}{(n-r)!}\quad" /> 
-
-### Combination
-
-<img src="https://latex.codecogs.com/gif.latex?\frac{n!}{(n-r)!r!}\quad" /> 
-
+## TBD
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -136,6 +126,7 @@ Distributed under the GNU License. See `LICENSE.md` for more information.
 Your Name - [@realfintorian](https://twitter.com/realfintorian) - johnson.larry.l@fintorian.com
 
 Project Link: [https://github.com/johnsonlarryl/machine_learning_training](https://github.com/your_username/repo_name)
+References: [Python Machine Learning - Second Edition](https://learning.oreilly.com/library/view/python-machine-learning/9781787125933/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

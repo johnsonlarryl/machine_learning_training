@@ -1,0 +1,11 @@
+name: perceptron_learning_algorithm
+
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  - matplotlib
+  - pandas
+  - python=3.9.5
+  - jupyter
