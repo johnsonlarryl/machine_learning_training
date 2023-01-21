@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "perceptron-learning-algorithm"
+name = "learning-algorithm"
 version = "0.1.0"
 description = ""
 authors = ["Larry Johnson <johnson.larry.l@fintorian.com>"]

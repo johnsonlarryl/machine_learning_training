@@ -6,14 +6,14 @@ class Perceptron(object):
         """
         Perceptron classifier
 
-        Parameters:
-        -----------
+        Parameters
+        ----------
         :param eta: Learning rate (between 0.0 and 1.0)
         :param n_iter: Passes over the training dataset
         :param random_state: Random number generator seed for random weight initialization
 
-        Returns:
-        --------
+        Returns
+        -------
         :return: None
         """
         self.eta = eta
@@ -24,21 +24,24 @@ class Perceptron(object):
         """
         Fit training data
 
-        Parameters:
-        -----------
+        Parameters
+        ----------
         :param x: {array-like}, shape = [n_samples, n_features]
-        Training vectors , where n_samples is the number of samples and n_features is the number of features
+                  Training vectors , where n_samples is the number of samples and n_features is the number of features
         :param y: {array-like}, shape = [n_samples] Target values
 
-        Returns:
+        Returns
         --------
         :return: self
         """
         regen = np.random.RandomState(self.random_state)
+
+        # 1d-array weights after fitting
         self.w_ = regen.normal(loc=0.0,
                                scale=0.01,
                                size=1 + x.shape[1])
 
+        # Number of misclassifications (updates) in each epoch.
         self.errors_ = []
 
         for _ in range(self.n_iter):
@@ -62,13 +65,13 @@ class Perceptron(object):
         ----------
         :param x: Training vectors , where n_samples is the number of samples and n_features is the number of features
 
-        Returns:
-        --------
-        The dot product of linear combinations input vectors and weighted feature veactors
+        Returns
+        -------
+        :return: The dot product of linear combinations of input vectors and weighted feature vectors
         """
         return np.dot(x, self.w_[1:]) + self.w_[0]
 
-    def predict(self, x):
+    def predict(self, x) -> np.ndarray:
         """
         Return class label after unit step function
 
@@ -76,9 +79,9 @@ class Perceptron(object):
         ----------
         :param x: Training vectors , where n_samples is the number of samples and n_features is the number of features
 
-        Returns:
-        --------
-        :return:
+        Returns
+        -------
+        :return: {array-like}, shape = [n_samples, n_features]
         """
         return np.where(self.net_input(x) >= 0.0, 1, -1)
 
