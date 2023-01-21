@@ -1,11 +1,13 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This project is a practical training tutorial for learning about the perception learning algorithm.
+This project is a practical training tutorial for learning about the perception and neuron learning algorithms.
 
-| Type                | Sub Type       | Algorithm                                   |
-|---------------------|----------------|---------------------------------------------|
-| Supervised Learning | Classification | [Perceptron](perceptron_learning_algorithm/) |
+| Type                | Sub Type       | Algorithm                                                               |
+|---------------------|----------------|-------------------------------------------------------------------------|
+| Supervised Learning | Classification | [Perceptron](learning_algorithm/algo/perceptron.py)                     |
+| Supervised Learning | Classification | [Adaptive Linear Neuron classifiers](learning_algorithm/algo/neuron.py) |
+
 
 ### Built With
 
@@ -66,7 +68,7 @@ Below is the list of steps for installing and setting up the app. These instruct
    ```sh
    poetry install
    conda env create -f environment.yaml
-   conda activate perceptron_learning_algorithm
+   conda activate learning_algorithm
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

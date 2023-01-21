@@ -1,4 +1,4 @@
-name: perceptron_learning_algorithm
+name: learning_algorithm
 
 channels:
   - conda-forge
