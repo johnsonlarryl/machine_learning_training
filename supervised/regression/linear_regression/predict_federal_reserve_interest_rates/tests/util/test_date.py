@@ -2,13 +2,13 @@ import datetime
 import os
 import pandas as pd
 from hypothesis import given, strategies as st
-from predict_federal_reserve_interest_rates.util.date import get_month, parse_cpi_index_period
+from util.date import get_month, parse_cpi_index_period
 
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 
 def period_strategy() -> str:
-    periods_df = pd.read_csv(f"{ROOT_DIR}/../../predict_federal_reserve_interest_rates/data/bls/cpi/bls_cpi_period.txt",
+    periods_df = pd.read_csv(f"{ROOT_DIR}/../../data/bls/cpi/bls_cpi_period.txt",
                              delim_whitespace=True)
 
     return st.lists(st.sampled_from(periods_df["period"].to_list()), min_size=1).map(",".join)
