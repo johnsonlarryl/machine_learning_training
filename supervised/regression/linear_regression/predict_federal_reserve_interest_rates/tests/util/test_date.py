@@ -2,7 +2,7 @@ import datetime
 import os
 import pandas as pd
 from hypothesis import given, strategies as st
-from util.date import get_month, parse_cpi_index_period
+from predict_federal_reserve_interest_rates.util.date import get_month, parse_cpi_index_period
 
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 
