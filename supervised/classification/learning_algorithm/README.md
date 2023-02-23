@@ -67,7 +67,7 @@ Below is the list of steps for installing and setting up the app. These instruct
 2. Install project
    ```sh
    poetry install
-   conda env create -f environment.yaml
+   conda env create -f environment.yml
    conda activate learning_algorithm
    ```
 

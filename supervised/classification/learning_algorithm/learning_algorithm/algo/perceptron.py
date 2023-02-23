@@ -73,7 +73,7 @@ class Perceptron(object):
 
     def predict(self, x) -> np.ndarray:
         """
-        Return class label after unit step function
+        Return class label after unit step function5
 
         Parameters
         ----------
