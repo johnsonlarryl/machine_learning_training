@@ -6,6 +6,7 @@ channels:
 
 dependencies:
   - matplotlib
+  - numpy=1.23.3
   - pandas
   - python=3.9.5
   - jupyter

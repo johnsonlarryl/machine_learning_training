@@ -1,39 +1,14 @@
 import numpy as np
 
+from base_model import BaseModel
 
-class Perceptron(object):
-    def __init__(self, eta: float = 0.01, n_iter: int = 50, random_state: int = 1):
-        """
-        Perceptron classifier
 
-        Parameters
-        ----------
-        :param eta: Learning rate (between 0.0 and 1.0)
-        :param n_iter: Passes over the training dataset
-        :param random_state: Random number generator seed for random weight initialization
-
-        Returns
-        -------
-        :return: None
-        """
-        self.eta = eta
-        self.n_iter = n_iter
-        self.random_state = random_state
+class Perceptron(BaseModel):
+    def __init__(self, eta: float = 0.01, epoch: int = 50, random_state: int = 1):
+        """ Perceptron classifier """
+        super.__init__(eta, epoch, random_state)
 
     def fit(self, x: np.ndarray, y: np.ndarray) -> object:
-        """
-        Fit training data
-
-        Parameters
-        ----------
-        :param x: {array-like}, shape = [n_samples, n_features]
-                  Training vectors , where n_samples is the number of samples and n_features is the number of features
-        :param y: {array-like}, shape = [n_samples] Target values
-
-        Returns
-        --------
-        :return: self
-        """
         regen = np.random.RandomState(self.random_state)
 
         # 1d-array weights after fitting
@@ -44,7 +19,7 @@ class Perceptron(object):
         # Number of misclassifications (updates) in each epoch.
         self.errors_ = []
 
-        for _ in range(self.n_iter):
+        for _ in range(self.epoch):
             errors = 0
 
             for xi, target in zip(x, y):
@@ -56,20 +31,6 @@ class Perceptron(object):
             self.errors_.append(errors)
 
         return self
-
-    def net_input(self, x) -> float:
-        """
-        Calculate the net input
-
-        Parameters
-        ----------
-        :param x: Training vectors , where n_samples is the number of samples and n_features is the number of features
-
-        Returns
-        -------
-        :return: The dot product of linear combinations of input vectors and weighted feature vectors
-        """
-        return np.dot(x, self.w_[1:]) + self.w_[0]
 
     def predict(self, x) -> np.ndarray:
         """

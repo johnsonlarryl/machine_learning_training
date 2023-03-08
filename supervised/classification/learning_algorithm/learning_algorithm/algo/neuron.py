@@ -1,40 +1,16 @@
 import numpy as np
 from typing import Tuple
 
+from base_model import AdaptiveLinearNeuron
 
-class AdaptiveLinearBatchGradientDescent(object):
-    def __init__(self, eta: float = 0.01, n_iter: int = 50, random_state: int = 1):
-        """
-        Adaptive Linear Neuron classifier
 
-        Parameters
-        ----------
-        :param eta: Learning rate (between 0.0 and 1.0)
-        :param n_iter: Passes over the training dataset
-        :param random_state: Random number generator seed for random weight initialization
-
-        Returns
-        --------
-        :returns: None
-        """
-        self.eta = eta
-        self.n_iter = n_iter
-        self.random_state = random_state
+class AdaptiveLinearBatchGradientDescent(AdaptiveLinearNeuron):
+    """ Adaptive Linear Neuron classifier  """
+    def __init__(self, eta: float = 0.01, epoch: int = 50, random_state: int = 1):
+        """ Adaptive Linear Neuron classifier """
+        super.__init__(eta, epoch, random_state)
 
     def fit(self, x: np.ndarray, y: np.ndarray) -> object:
-        """
-        Fit training data
-
-        Parameters
-        ----------
-        :param x: {array-like}, shape = [n_samples, n_features]
-                  Training vectors, where n_samples is the number of samples and n_features is the number of features
-        :param y: {array-like}, shape = [n_samples] Target values
-
-        Returns
-        -------
-        :return: self
-        """
         rgen = np.random.RandomState(self.random_state)
 
         # Weights after fitting
@@ -45,7 +21,7 @@ class AdaptiveLinearBatchGradientDescent(object):
         # Sum-of-squares cost function value in each epoch
         self.cost_ = []
 
-        for _ in range(self.n_iter):
+        for _ in range(self.epoch):
             net_input = self.net_input(x)
             output = self.activation(net_input)
             errors = (y - output)
@@ -56,91 +32,33 @@ class AdaptiveLinearBatchGradientDescent(object):
 
         return self
 
-    def net_input(self, x: np.ndarray) -> np.ndarray:
-        """
-        Calculate net input
 
-        Parameters
-        ----------
-        :param x: {array-like}, shape = [n_samples, n_features]
-                  Training vectors, where n_samples is the number of samples and n_features is the number of features
-
-        Returns
-        -------
-        :return: The dot product of linear combinations of input vectors and weighted feature vectors
-        """
-        return np.dot(x, self.w_[1:] + self.w_[0])
-
-    @staticmethod
-    def activation(x: np.ndarray) -> np.ndarray:
-        """
-        Computer the linear activation
-
-        Parameters
-        ----------
-        :param x: {array-like}, shape = [n_samples, n_features]
-                  Training vectors, where n_samples is the number of samples and n_features is the number of features
-        :return: {array-like}, shape = [n_samples, n_features]
-                  Training vectors, where n_samples is the number of samples and n_features is the number of features
-        """
-        return x
-
-    def predict(self, x) -> np.ndarray:
-        """
-        Return class label after unit step
-
-        Parameters
-        ----------
-        :param x: {array-like}, shape = [n_samples, n_features]
-                  Training vectors, where n_samples is the number of samples and n_features is the number of features
-
-        Returns
-        -------
-        :return: {array-like}, shape = [n_samples, n_features]
-        """
-        return np.where(self.activation(self.net_input(x)) >= 0.0, 1, -1)
-
-
-class AdaptiveLinearStochasticGradientDescent(object):
+class AdaptiveLinearStochasticGradientDescent(AdaptiveLinearNeuron):
     """
      Adaptive Linear Neuron classifier
 
      Parameters
      ----------
      :param eta: Learning rate (between 0.0 and 1.0)
-     :param n_iter: Passes over the training dataset
+     :param epoch: Passes over the training dataset
      :param random_state: Random number generator seed for random weight initialization
      :param shuffle: Modify a sequence in-place by shuffling its contents.
+                     Shuffles training data every epoch
 
      Returns
      --------
      :returns: None
      """
-    def __init__(self, eta: float = 0.01, n_iter: int = 10, random_state: int = 1, shuffle=True):
-        self.eta = eta
-        self.n_iter = n_iter
-        self.random_state = random_state
+    def __init__(self, eta: float = 0.01, epoch: int = 10, random_state: int = 1, shuffle=True):
+        super.__init__(eta, epoch, random_state)
         self.shuffle = shuffle
         self.w_initialized = False
 
     def fit(self, x: np.ndarray, y: np.ndarray) -> object:
-        """
-        Fit training data
-
-        Parameters
-        ----------
-        :param x: {array-like}, shape = [n_samples, n_features]
-                  Training vectors, where n_samples is the number of samples and n_features is the number of features
-        :param y: {array-like}, shape = [n_samples] Target values
-
-        Returns
-        -------
-        :return: self
-        """
         self._initialize_weights(x.shape[1])
         self.cost_ = []
 
-        for i in range(self.n_iter):
+        for i in range(self.epoch):
             if self.shuffle:
                 x, y = self._shuffle(x, y)
 
@@ -236,44 +154,3 @@ class AdaptiveLinearStochasticGradientDescent(object):
 
         return cost
 
-    def net_input(self, x: np.ndarray) -> np.ndarray:
-        """
-        Calculate the net input
-
-        Parameters
-        ----------
-        :param x: array-like}, shape = [n_samples, n_features]
-                  Training vectors, where n_samples is the number of samples and n_features is the number of features
-
-        Returns
-        -------
-        :return: The dot product of linear combinations of input vectors and weighted feature vectors
-        """
-        return np.dot(x, self.w_[1:]) + self.w_[0]
-
-    @staticmethod
-    def activation(x: np.ndarray) -> np.ndarray:
-        """
-        Compute linear activation
-
-        :param x: array-like}, shape = [n_samples, n_features]
-                  Training vectors, where n_samples is the number of samples and n_features is the number of features
-
-        :return: {array-like}, shape = [n_samples, n_features]
-                 Training vectors, where n_samples is the number of samples and n_features is the number of features
-        """
-        return x
-
-    def predict(self, x: np.ndarray) -> np.ndarray:
-        """
-        Return class label after unit step
-
-        Parameters
-        ----------
-        :param x:
-
-        Returns
-        -------
-        :return: {array-like}, shape = [n_samples, n_features]
-        """
-        return np.where(self.activation(self.net_input(x)) >= 0.0, 1, -1)
