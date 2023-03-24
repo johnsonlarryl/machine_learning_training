@@ -7,7 +7,8 @@ import numpy as np
 def plot_decision_regions(X: np.ndarray,
                           y: np.ndarray,
                           classifier: object,
-                          resolution=0.02) -> None:
+                          resolution=0.02,
+                          test_idx: range = None) -> None:
     # setup marker generator and color map
     markers = ('s', 'x', 'o', '^', 'v')
     colors = ('red', 'blue', 'lightgreen', 'gray', 'cyan')
@@ -35,3 +36,14 @@ def plot_decision_regions(X: np.ndarray,
                     marker=markers[idx],
                     label=clazz,
                     edgecolor='black')
+
+    # highlight test samples
+    if test_idx:
+        # plot all samples
+
+        X_test, y_test = X[test_idx, :], y[test_idx]
+
+        plt.scatter(X_test[:, 0], X_test[:, 1],
+                    c=None, edgecolor='black', alpha=0.5,
+                    linewidth=1, marker='o',
+                    s=100, label='test set')
