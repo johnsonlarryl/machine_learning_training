@@ -37,7 +37,7 @@ def plot_decision_regions(X: np.ndarray,
                     label=clazz,
                     edgecolor='black')
 
-    # highlight test samples
+    # highlight tests samples
     if test_idx:
         # plot all samples
 
@@ -46,4 +46,4 @@ def plot_decision_regions(X: np.ndarray,
         plt.scatter(X_test[:, 0], X_test[:, 1],
                     c=None, edgecolor='black', alpha=0.5,
                     linewidth=1, marker='o',
-                    s=100, label='test set')
+                    s=100, label='tests set')
