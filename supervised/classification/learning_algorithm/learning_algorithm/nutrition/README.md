@@ -19,7 +19,6 @@ According to the National Health System (NHS) men should not eat more than 30g o
 
 | Type                  | Sub Type       | Algorithm                  |
 |-----------------------|----------------|----------------------------|
-| Supervised Learning   | Classification | [Logistric Regression](./) |
 | Unsupervised Learning | Classification | [K-Means](./)              |
 | Statistics            | Inference | [Inference](./)            |
 
