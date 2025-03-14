@@ -1,0 +1,17 @@
+name: neural_networks
+
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  - kaggle
+  - keras
+  - matplotlib
+  - opencv
+  - pandas
+  - python=3.9.5
+  - jupyter
+  - seaborn
+  - scikit-learn
+  - tensorflow
