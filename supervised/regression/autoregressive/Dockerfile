@@ -16,8 +16,3 @@ SHELL ["/bin/bash", "-c"]
 RUN conda env create -f environment.yml
 RUN . ~/.bashrc
 RUN echo "source activate ${PROJECT_NAME}"
-
-# Run Jupyter Notebook when the container launches
-# Use the `--ip=0.0.0.0` to make the notebook accessible from outside the container
-#ENTRYPOINT ["/opt/conda/envs/${PROJECT_NAME}/autoregressive/bin/jupyter", "notebook", "--notebook-dir=/app", "--ip='0.0.0.0'", "--port=8888", "--no-browser", "--allow-root", "--NotebookApp.token=''"]
-#CMD [ "jupyter", "notebook", "--ip=0.0.0.0", "--no-browser", "--allow-root", "--NotebookApp.token=''" ]
