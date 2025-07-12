@@ -1,0 +1,10 @@
+name: autoregressive
+dependencies:
+  - matplotlib
+  - notebook
+  - numpy
+  - pandas
+  - openpyxl
+  - scikit-learn
+  - scipy
+  - seaborn

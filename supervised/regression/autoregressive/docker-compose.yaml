@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  autoregressive:
+      build:
+        context: .
+        dockerfile: Dockerfile
+      command: >
+        bash -c "
+          source activate autoregressive &&
+          jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root --NotebookApp.token=''
+        "
+      volumes:
+        - .:/app
+      ports:
+        - "8888:8888"
+      networks:
+        - autoregressive-net
+
+networks:
+  autoregressive-net:
+    driver: bridge
