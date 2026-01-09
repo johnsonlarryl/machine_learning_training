@@ -75,7 +75,9 @@ Measures prediction error (e.g., squared error, log loss):
 
 Controls model complexity:
 
+<!-- TODO - fix
 ![](https://latex.codecogs.com/png.latex?\Omega(f)=\gamma T+\frac{1}{2}\lambda\sum_jw_j^2)
+ -->
 
 Where:
 - \( T \) = number of leaves  
@@ -87,7 +89,8 @@ Where:
 
 ## Gradient & Hessian Approximation
 
-XGBoost uses a second-order Taylor expansion of the loss:
+<!-- 
+TODO - Need to fix XGBoost uses a second-order Taylor expansion of the loss:
 
 ![](https://latex.codecogs.com/png.latex?l\!\left(y_i,\hat{y}_i^{(t-1)}+f_t(x_i)\right)\approx l\!\left(y_i,\hat{y}_i^{(t-1)}\right)+g_i\,f_t(x_i)+\frac{1}{2}h_i\,f_t(x_i)^2)
 
@@ -95,7 +98,8 @@ Where:
 
 ![](https://latex.codecogs.com/png.latex?g_i=\left.\frac{\partial l\!\left(y_i,\hat{y}\right)}{\partial\hat{y}}\right|_{\hat{y}=\hat{y}_i^{(t-1)}}\;\text{(first-order gradient)})
 
-![](https://latex.codecogs.com/png.latex?h_i=\left.\frac{\partial^2 l\!\left(y_i,\hat{y}\right)}{\partial\hat{y}^2}\right|_{\hat{y}=\hat{y}_i^{(t-1)}}\;\text{(second-order Hessian)})
+![](https://latex.codecogs.com/png.latex?h_i=\left.\frac{\partial^2 l\!\left(y_i,\hat{y}\right)}{\partial\hat{y}^2}\right|_{\hat{y}=\hat{y}_i^{(t-1)}}\;\text{(second-order Hessian)}) 
+-->
 
 
 This improves:
