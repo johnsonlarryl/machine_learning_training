@@ -89,11 +89,12 @@ Where:
 
 XGBoost uses a **second-order Taylor expansion** of the loss:
 
-![](https://latex.codecogs.com/png.latex?l(y,\hat{y}^{(t-1)}+f_t(x))\approx l+g_i f_t(x)+\frac{1}{2}h_i f_t(x)^2)
+![](https://latex.codecogs.com/png.latex?l\!\left(y_i,\hat{y}_i^{(t-1)}+f_t(x_i)\right)\approx l\!\left(y_i,\hat{y}_i^{(t-1)}\right)+g_i\,f_t(x_i)+\frac{1}{2}h_i\,f_t(x_i)^2)
 
 Where:
-- ![](https://latex.codecogs.com/png.latex?g_i=\frac{\partial l}{\partial\hat{y}}) — gradient  
-- ![](https://latex.codecogs.com/png.latex?h_i=\frac{\partial^2 l}{\partial\hat{y}^2}) — Hessian  
+- ![](https://latex.codecogs.com/png.latex?g_i=\left.\frac{\partial l(y_i,\hat{y})}{\partial\hat{y}}\right|_{\hat{y}=\hat{y}_i^{(t-1)}})\;—\;\text{first-order gradient}
+- ![](https://latex.codecogs.com/png.latex?h_i=\left.\frac{\partial^2 l(y_i,\hat{y})}{\partial\hat{y}^2}\right|_{\hat{y}=\hat{y}_i^{(t-1)}})\;—\;\text{second-order Hessian}
+
 
 This improves:
 
