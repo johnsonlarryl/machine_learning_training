@@ -1,0 +1,15 @@
+name: autoregressive
+dependencies:
+  - fastparquet
+  - matplotlib
+  - notebook
+  - numpy
+  - pandas
+  - openpyxl
+  - plotly
+  - pyarrow
+  - scikit-learn
+  - scipy
+  - seaborn
+  - statsmodels
+  - tqdm
