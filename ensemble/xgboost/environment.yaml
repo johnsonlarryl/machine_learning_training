@@ -1,0 +1,13 @@
+name: xgboost
+
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  - pandas
+  - python=3.9.5
+  - jupyter
+  - scikit-learn
+  - statsmodels
+  - xgboost
